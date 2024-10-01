@@ -5,7 +5,10 @@ import time
 
 audio_files = os.listdir("audio")
 playback = Playback()
-sample_length = 7
+
+# Change sample_length to change how long a sample is played in seconds
+sample_length = 15
+
 played_songs = []
 
 while len(played_songs) != len(audio_files):
@@ -24,7 +27,7 @@ while len(played_songs) != len(audio_files):
     except:
         print(file)
     playback.play()
-    playback.seek(random.random()*playback.duration-sample_length)
+    playback.seek(random.random()*(playback.duration-sample_length))
 
     time.sleep(sample_length)
     playback.stop()
