@@ -6,9 +6,8 @@ import time
 audio_files = os.listdir("audio")
 playback = Playback()
 
-# Change sample_length to change how long a sample is played in seconds
-sample_length = 15
-
+# Change number to change length of samples in seconds
+sample_length = 10
 played_songs = []
 
 while len(played_songs) != len(audio_files):
